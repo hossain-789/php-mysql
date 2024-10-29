@@ -1,22 +1,3 @@
-<!-- <form action="./insert.php" method="post">
-
-    <input type="text" placeholder="enter name" name="name">
-    <br />
-    <br />
-    <input type="text" placeholder="enter color" name="color">
-    <br />
-    <br />
-    <input type="text" placeholder="enter shop" name="shop">
-    <br />
-    <br />
-    <input type="text" placeholder="enter quality" name="quality">
-    <br />
-    <br />
-
-    <button type="submit">Add New product</button>
-
-</form> -->
-
 <form action="./insert.php" method="post">
 <input type="text" name="name" placeholder="enter name">
 <br />
@@ -57,29 +38,6 @@ if(isset($_POST['name'])){
     echo 'opertion failed';
 }
 }
-
-
-// if(isset($_POST['name'])){
-//     $name = $_POST['name'];
-//     $color = $_POST['color'];
-//     $shop = $_POST['shop'];
-//     $quality = $_POST['quality'];
-
-// include("./config.php");
-// $product = $conn->prepare("
-// INSERT INTO `product` ( `name`, `color`, `shop`, `quality`)
-// VALUES ( '$name', '$color', '$shop', '$quality')
-// ");
-
-//     $result = $product->execute();
-//     if ($result) {
-//         echo "data inserted";
-//     } else {
-//         echo "operation faile";
-//     }
-
-// }
-
 
 
 ?>

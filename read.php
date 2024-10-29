@@ -73,7 +73,7 @@ foreach ($students as $student) {
 }
 echo "<table>";
 */
-
+/*
 include("./config.php");
 $getStudents = $conn->prepare("SELECT * FROM product");
 $getStudents->execute();
@@ -90,5 +90,41 @@ foreach($products as $product) {
     </tr>";
 }
 echo "</border>";
+*/
+
+// include("./config.php");
+// $getTeachers= $conn->prepare("SELECT * FROM teacher");
+// $getTeachers->execute();
+// $teachers = $getTeachers->fetchAll();
+
+
+// echo "<table border='1'>";
+// foreach($teachers as $teacher){
+//     echo "<tr>
+//     <td>" .$teacher['Name'] ."</td>
+//     <td>" .$teacher['Gender'] ."</td>
+//     <td>" .$teacher['Department'] ."</td>
+//     <td>" .$teacher['City'] ."</td>
+//     <tr>";
+// }
+// echo "<table>";
+
+
+include("./config.php");
+
+$getProducts=$conn->prepare("SELECT * FROM product");
+$getProducts->execute();
+$products = $getProducts->fetchAll();
+
+echo "<table border='1'>";
+foreach($products as $product){
+    echo "<tr>
+    <td>" .$product['name'] ."</td>
+    <td>" .$product['color'] ."</td>
+    <td>" .$product['shop'] ."</td>
+    <td>" .$product['quality'] ."</td>
+    </tr>";
+}
+echo "<table>"
 
 ?>
