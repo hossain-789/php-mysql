@@ -91,6 +91,7 @@ while($row = $result->fetch(PDO::FETCH_NUM)){
 }
 */
 
+/*
 $host = "localhost";
 $username = "root";
 $password = null;
@@ -110,3 +111,30 @@ while($row = $result->fetch(PDO::FETCH_NUM)){
     print_r($row);
     echo "</pre>";
 }
+*/
+
+
+$host = "localhost";
+$username = "root";
+$password = null;
+
+try{
+    $conn= new PDO("mysql:host=$host;dbname=college",$username,$password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO:: ERRMODE_EXCEPTION);
+    echo "connect success";
+}catch(PDOException $err){
+    echo "connect failed $err->getMessage()";
+}
+
+echo "<br/>";
+
+$resul = $conn->query("show tables");
+while($row= $resul->fetch(PDO::FETCH_NUM)){
+    echo "<pre>";
+    print_r($row);
+    echo "</pre>";
+
+}
+
+
+?>
