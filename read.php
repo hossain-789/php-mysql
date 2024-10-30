@@ -110,21 +110,73 @@ echo "</border>";
 // echo "<table>";
 
 
+
+// include("./config.php");
+
+// $getProducts=$conn->prepare("SELECT * FROM product");
+// $getProducts->execute();
+// $products = $getProducts->fetchAll();
+
+// echo "<table border='1'>";
+// foreach($products as $product){
+//     echo "<tr>
+//     <td>" .$product['name'] ."</td>
+//     <td>" .$product['color'] ."</td>
+//     <td>" .$product['shop'] ."</td>
+//     <td>" .$product['quality'] ."</td>
+//     </tr>";
+// }
+// echo "<table>"
+
+
+// include("./config.php");
+// $getStudents = $conn->prepare("SELECT * FROM student");
+// $getStudents->execute();
+// $students = $getStudents->fetchAll();
+
+// echo "<table border='1'>";
+// foreach ($students as $student) {
+//     echo "<tr>
+//     <td>" . $student["name"] . "</td>
+//     <td>" . $student["year_level"] . "</td>
+//     <td>" . $student["section"] . "</td>
+//     <td>" . $student["sub_name"] . "</td>
+//     <tr>";
+// }
+// echo "<table>";
+
+
+// include("./config.php");
+// $getStudent = $conn->prepare("SELECT * FROM student");
+// $getStudent->execute();
+// $students = $getStudent->fetchAll();
+
+// echo "<table border= '1' >";
+// foreach($students as $student){
+//     echo "<tr>
+//     <td>" .$student['name'] ."</td>
+//     <td>" .$student['year_level'] ."</td>
+//     <td>" .$student['section'] ."</td>
+//     <td>" .$student['sub_name'] ."</td>
+//     <tr>";
+//     }
+// echo "<table>";
+
 include("./config.php");
 
-$getProducts=$conn->prepare("SELECT * FROM product");
-$getProducts->execute();
-$products = $getProducts->fetchAll();
+$getStudents=$conn->prepare("SELECT * FROM student");
+$getStudents->execute();
+$students = $getStudents->fetchAll();
 
-echo "<table border='1'>";
-foreach($products as $product){
+echo "<table border = '1'>";
+foreach($students as $student){
     echo "<tr>
-    <td>" .$product['name'] ."</td>
-    <td>" .$product['color'] ."</td>
-    <td>" .$product['shop'] ."</td>
-    <td>" .$product['quality'] ."</td>
-    </tr>";
+    <td>".$student['name'] ."</td>
+    <td>".$student['year_level'] ."</td>
+    <td>".$student['section'] ."</td>
+    <td>".$student['sub_name'] ."</td>
+    <tr>";
 }
-echo "<table>"
+echo "<table>";
 
 ?>
