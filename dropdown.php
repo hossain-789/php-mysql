@@ -1,19 +1,15 @@
 <?php
 include ("./config.php");
-$getPancils = $conn->prepare("SELECT * FROM pancil");
-$getPancils->execute();
-$pancilData = $getPancils->fetchAll();
+$getStudents = $conn->prepare("SELECT * FROM student_result");
+$getStudents->execute();
+$students = $getStudents->fetchAll();
 
 echo "<select>";
-echo "<option>Select Name</option>";
-foreach ($pancilData as $pancils) {
-    echo "<option velue=".$pancils['id'].">".$pancils['name']."</option>";
-
-};
+echo "<option>select name</option>";
+foreach($students as $student){
+echo "<option value=".$student['id'].">".$student['name']."</option>";
+}
 echo "</select>";
-
-
-
 
 
 ?>
